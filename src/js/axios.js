@@ -1,6 +1,6 @@
 const axios = require('axios').default;
 
-export default function fetchByAxiosPictures(name, page) {
+export default async function fetchByAxiosPictures(name, page) {
   return axios
     .get('https://pixabay.com/api', {
       params: {
