@@ -94,7 +94,7 @@ async function onFormSubmit(e) {
       const markupPictures = await fetchPictures(searchResult, page);
 
       // axios - обработка ответа с бекенда в console.log
-      fetchByAxiosPictures(searchResult, page);
+      // fetchByAxiosPictures(searchResult, page);
 
       if (markupPictures.hits.length !== 0) {
         // правильно отобразить количество загруженных фото

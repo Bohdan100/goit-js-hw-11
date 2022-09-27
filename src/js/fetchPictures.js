@@ -1,5 +1,5 @@
-// Функция fetchCountries - верни ответ на http-запрос
-// и ответ response переведи в формат json - return response.json
+// Функция fetchCountries - возвращает ответ на http-запрос
+// и ответ response переводит в формат json - return response.json
 
 // Переменные базовый URL-адрес - BASE_URL и фильтр запроса - filterFields
 const BASE_URL = 'https://pixabay.com/api';
