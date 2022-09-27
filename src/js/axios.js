@@ -1,7 +1,7 @@
 const axios = require('axios').default;
 
 export default function fetchByAxiosPictures(name, page) {
-  axios
+  return axios
     .get('https://pixabay.com/api', {
       params: {
         key: '29959892-dbc4da226a3c63fb0b6c6ac05',
@@ -12,12 +12,13 @@ export default function fetchByAxiosPictures(name, page) {
         page: `${page}`,
         per_page: '40',
       },
-      // headers: {
-      //   'Content-Type': 'application/json',
-      // },
+      headers: {
+        'Content-Type': 'application/json',
+      },
     })
     .then(response => {
-      console.log('AXIOS - response.data', response.data);
+      // console.log('AXIOS - response.data', response.data);
+      return response.data;
     })
     .catch(error => {
       console.log(error.toJSON());
@@ -35,7 +36,7 @@ export default function fetchByAxiosPictures(name, page) {
 //   // возвращать изображения, подходящие для всех возрастов
 //   const safesearch = 'safesearch=true';
 
-//   axios
+//   return axios
 //     .get(
 //       `${BASE_URL}/?key=${API_key}&q=${name}&${image_type}&${orientation}&${safesearch}&page=${page}&per_page=40`,
 //       { headers: { 'Content-Type': 'application/json' } }
