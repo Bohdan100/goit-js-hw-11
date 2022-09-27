@@ -1,0 +1,112 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 250ms;
+}
+
+// ------------search-form-------------------------
+.search-form {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #4169e1;
+}
+
+.search-form > button {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.search-form > input {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+// ------------gallery-------------------------
+.gallery {
+  display: grid;
+  max-width: 1140px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 240px;
+  grid-gap: 10px;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery__card {
+  position: relative;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.gallery__image:hover {
+  transform: scale(1.03);
+  cursor: zoom-in;
+}
+
+.gallery__image {
+  height: 80%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform var(--animation-duration) var(--timing-function);
+}
+
+.info {
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+}
+
+// -------------load-more button-------------------
+.load-more {
+  text-align: center;
+  width: 140px;
+  height: 50px;
+  margin: 20px 0px 0px 0px;
+  border-radius: 4px;
+  border: #ffffff;
+
+  padding-left: auto;
+  padding-right: auto;
+  color: #ffffff;
+  background-color: #4169e1;
+}
+
+.load-more-container {
+  text-align: center;
+}
+
+.load-more-text {
+  margin-left: 10px;
+}
+
+.load-more.is-hidden {
+  display: none;
+}
+
+.spinner {
+  color: #ffffff;
+}
+
+.load-more > .spinner.is-hidden {
+  display: none;
+}
+
+// .visually-hidden {
+//   position: absolute;
+//   width: 1px;
+//   height: 1px;
+//   margin: -1px;
+//   border: 0;
+//   padding: 0;
+
+//   white-space: nowrap;
+//   clip-path: inset(100%);
+//   clip: rect(0 0 0 0);
+//   overflow: hidden;
+// }
