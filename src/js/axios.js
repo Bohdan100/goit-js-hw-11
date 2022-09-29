@@ -2,7 +2,7 @@ const axios = require('axios').default;
 
 export default async function fetchByAxiosPictures(name, page) {
   return axios
-    .get('https://pixabay.com/api', {
+    .get('https://pixabay.com/api/', {
       params: {
         key: '29959892-dbc4da226a3c63fb0b6c6ac05',
         q: `${name}`,
